@@ -4,7 +4,7 @@ const defaultNavBar =
 <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 h-auto fixed-top z-index-5 d-flex flex-row justify-content-between align-items-center bg-glass-effect smooth-transition">
     <div class="container-fluid">
         <a class="navbar-brand w-25" href="#"> 
-            <img class="logo" id="logo" src="/assets/images/imgs/logo.jpeg" alt="logo">
+            <img class="logo" id="logo" src="assets/images/imgs/logo.jpeg" alt="logo">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

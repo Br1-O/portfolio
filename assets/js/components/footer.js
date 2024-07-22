@@ -11,7 +11,7 @@ const footerContent = `
     <footer id="contact">
         <div class="footer-container">
 
-            <img id="footer-logo" src="assets/resources/img/Logo_Oshare.jpg" alt="Oshare Designs logo">
+            <img id="footer-logo" src="assets/images/imgs/logo.jpeg" alt="Oshare Designs logo">
 
             <div class="footer-container-info" id="contact-info">
                 <a href="">
