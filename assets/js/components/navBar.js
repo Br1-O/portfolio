@@ -4,7 +4,7 @@ const defaultNavBar =
 <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 h-auto fixed-top z-index-5 d-flex flex-row justify-content-between align-items-center bg-glass-effect smooth-transition">
     <div class="container-fluid">
         <a class="navbar-brand w-25" href="#"> 
-            <img class="logo" id="logo" src="/assets/images/imgs/blank-image-placeholder.png" alt="logo">
+            <img class="logo" id="logo" src="/assets/images/imgs/logo.jpeg" alt="logo">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,33 +15,41 @@ const defaultNavBar =
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row justify-content-around align-items-center p-2 w-75">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Sobre mí </a>
+                    <a class="nav-link" href="#sobre-mi"> Sobre mí </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Formación </a>
+                    <a class="nav-link" href="#formacion"> Formación </a>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Proyectos
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu bg-glass-effect">
                         <li>
-                            <a class="dropdown-item" href="#"> Action </a>
+                            <a class="dropdown-item" href="#"> Oshare Designs </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#"> Another action </a>
+                            <a class="dropdown-item" href="#"> Nextflix </a>
                         </li>
                         <li>
-                            <hr class="dropdown-divider">
+                            <a class="dropdown-item" href="#"> PokeDex </a>
                         </li>
-                        <li><a class="dropdown-item" href="#"> Something else here </a></li>
+                        <li>
+                            <a class="dropdown-item" href="#"> Pagina Portfolio </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"> Batch </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"> CRM </a>
+                        </li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Contacto </a>
+                    <a class="nav-link" href="#contacto"> Contacto </a>
                 </li>
             </ul>
         </div>

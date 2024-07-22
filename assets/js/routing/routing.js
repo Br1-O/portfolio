@@ -9,12 +9,8 @@ import { footer } from "../components/footer.js";
 import { maxLengthValidation, minLengthValidation, phoneNumberValidation, emailValidation, isAlpha, isNum, areValuesEqual, passwordValidation } from "../validation/utils.js";
 //page not found content
 import { notFoundMessage } from "../pages/notFound404.js";
-//page not authorized content
-import { notAuthorizedMessage } from "../pages/notAuthorized401.js";
 //user model to control state
 import { userData } from "../models/user.js";
-import { getSessionData, setSessionData, setUserDataFromSessionData } from "../utils/sessionStorage.js";
-import { updateAccountData } from "../utils/localStorage.js";
 import { dinamicRouteDisplay } from "./dinamicRouting.js";
 //input components
 import { editableField, editableFieldsEventListeners } from "../components/forms/editableField.js";
@@ -68,7 +64,7 @@ export const updateContent = async() => {
             case '':
 
                 //update title attribute of page
-                document.title =  ``;
+                document.title =  ` Bruno O. Ortuno · Portfolio `;
 
                 //include proper navbar
                 navBar(userData.isSessionSet);
@@ -116,6 +112,8 @@ export const updateContent = async() => {
                     // });
 
                 //■■■■■■■■■■■■■■■■■■■■ if dinamic routes are not matched display not found page ■■■■■■■■■■■■■■■■■■■■//
+
+                const singleProductPageRouteHandler = false;
 
                 if (singleProductPageRouteHandler) {
 

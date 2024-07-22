@@ -804,7 +804,7 @@ body{
 }
 
 .logo{
-  max-width: max(3.5vmax, 3.5rem);
+  max-width: max(4.5vmax, 4.5rem);
   height: auto;
 
   border-style: solid;
