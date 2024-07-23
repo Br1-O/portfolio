@@ -71,7 +71,7 @@ textarea {
     }
 }
 
-/* move element on X axis to the right*/
+/* move element on Y axis downwards*/
 @keyframes TranslateY {
     0%{
         transform: translateY(2.5px);
@@ -95,6 +95,32 @@ textarea {
         transform: translateY(0px);
     }
 }
+
+/* move element on Y axis upwards*/
+@keyframes TranslateUpY {
+  0%{
+    transform: translateY(0px);
+  }
+  15%{
+    transform: translateY(15px);
+  }
+  30%{
+    transform: translateY(12.5px);
+  }
+  45%{
+    transform: translateY(10px);
+  }
+  70%{
+    transform: translateY(7.5px);
+  }
+  85%{
+    transform: translateY(5px);
+  }
+  100%{
+    transform: translateY(2.5px);
+  }
+}
+
 
 /* rotate element on X axis to the right*/
 @keyframes RotateX {
@@ -549,7 +575,6 @@ textarea {
 }
 
 /* zoom In element*/
-
 @keyframes zoomIn {
     0% { transform: scale(0); }
     2% { transform: scale(0.02); }
@@ -724,8 +749,6 @@ textarea {
     opacity: 1;
   }
 
-
-
 /* ■■■■­■■­■■­■■­■■ Scrollbar ■■■■­■■­■■­■■­■■ */
 
 ::-webkit-scrollbar {
@@ -769,7 +792,7 @@ textarea {
 
 .loading-logo{
     background-color: var(--main-bg-color);
-    background-image: url("../resources/img/Logo_Oshare_Loading.jpg");
+    background-image: url("../images/imgs/logo.jpeg");
     background-size: cover ;
     background-repeat: no-repeat;
     background-position: center;
@@ -880,8 +903,6 @@ body{
   display:none;
 }
 
-
-
 /* ■■■■­■■­■■­■■­■■ MAIN ■■­■■­■■­■■­■■­■■­ ­*/
 
 .main{
@@ -890,6 +911,9 @@ body{
 
   background-color: var(--main-bg-color);
 }
+
+/* ■■■■­■■­■■­■■­■■ profile card ■■­■■­■■­■■­■■­■■­ ­*/
+
 
 /* ■■■■­■■­■■­■■­■■ carousel projects ■■­■■­■■­■■­■■­■■­ ­*/
 
@@ -932,17 +956,17 @@ body{
 }
 
 
-/* Downwards arrow to next section */
+/* ■■■■­■■­■■­■■­■■ Downwards arrow to next section ■■■■­■■­■■­■■­■■ */
 
-.down-arrow{
+.arrow{
   position: absolute;
   top:85%;
   right: 10%;
   z-index: 3;
 }
 
-.down-arrow a i{
-  font-size: 2.5rem;
+.arrow a i{
+  font-size: max(2.5vmax, 1.5rem);
   color:var(--font-color);
 
   border: 2px solid var(--border-color);
@@ -963,6 +987,15 @@ body{
   background-color: var(--border-color);
 
   animation-name: TranslateY;
+  animation-duration: 1.45s;
+  animation-iteration-count: infinite;
+}
+
+.up-arrow a i:hover{
+  color: var(--font-hover-color);
+  background-color: var(--border-color);
+
+  animation-name: TranslateUpY;
   animation-duration: 1.45s;
   animation-iteration-count: infinite;
 }

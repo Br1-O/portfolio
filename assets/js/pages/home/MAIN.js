@@ -1,7 +1,9 @@
-import { carrousel } from "../../components/carrousel.js";
-import { btnArrowDown } from "../../components/btns/btnArrowDown.js";
+import { carrousel } from "../../components/dataDisplayers/carrousel.js";
+import { btnArrowDown, btnArrowUp } from "../../components/btns/btnArrow.js";
 import { separatorWavy } from "../../components/separators/separatorWavy.js";
 import { cardHorizontal } from "../../components/cards/cardHorizontal.js";
+import { accordion } from "../../components/dataDisplayers/accordion.js";
+import { form } from "../../components/forms/form.js";
 
 
 export const homeContent = `
@@ -9,7 +11,7 @@ export const homeContent = `
     <!-- Wavy separator -->
     ${separatorWavy("rgb(67, 75, 82)", "#9b58da", "sobre-mi")}
 
-    <div id="about-me" class="position-relative d-flex flex-row justify-content-center align-items-center">
+    <section id="about-me" class="position-relative d-flex flex-row justify-content-center align-items-center">
 
         ${cardHorizontal(
             {
@@ -22,33 +24,63 @@ export const homeContent = `
 
         ${btnArrowDown("formacion", "Ver formación")}
     
-    </div>
+    </section>
 
     <!-- Wavy separator -->
     ${separatorWavy("rgb(224, 187, 228)", "#9b58da", "formacion", "rgb(67, 75, 82)")}
 
-    <div id="formation" class="position-relative" style="background-color: rgb(67, 75, 82);">
+    <section id="formation" class="position-relative d-flex flex-row justify-content-center align-items-center" style="background-color: rgb(67, 75, 82);">
 
-        <p>
-            SOY UN PLACEHOLDER
-            SOY UN PLACEHOLDER
-            SOY UN PLACEHOLDER
-            SOY UN PLACEHOLDER
-            SOY UN PLACEHOLDER
-            SOY UN PLACEHOLDER
-            SOY UN PLACEHOLDER
-            SOY UN PLACEHOLDER
-            SOY UN PLACEHOLDER
-        </p>
+        ${accordion("formation-accordion",
+        [
+            {
+                title: "ONE - Oracle Next Education",
+                text: ["Formación backend en Java implementando Springboot y mySQL", "Inicio: Marzo 2023", "Finalización: Octubre 2023"],
+                anchorText: "Ver certificado",
+                anchorLink: "https://app.aluracursos.com/program/certificate/ad3cafe0-71e9-46b6-b916-92aebe510d8c",
+                img: "assets/images/imgs/certificates/oracle_backend.png",
+                alt: "certificado backend Java SpringBoot"
+            },
+            {
+                title: "ONE - Oracle Next Education",
+                text: ["Formación backend en Java implementando Springboot y mySQL", "Inicio: Marzo 2023", "Finalización: Octubre 2023"],
+                anchorText: "Ver certificado",
+                anchorLink: "https://app.aluracursos.com/program/certificate/ad3cafe0-71e9-46b6-b916-92aebe510d8c"
+            },
+            {
+                title: "ONE - Oracle Next Education",
+                text: ["Formación backend en Java implementando Springboot y mySQL", "Inicio: Marzo 2023", "Finalización: Octubre 2023"],
+                anchorText: "Ver certificado",
+                anchorLink: "https://app.aluracursos.com/program/certificate/ad3cafe0-71e9-46b6-b916-92aebe510d8c"
+            },
+            {
+                title: "ONE - Oracle Next Education",
+                text: ["Formación backend en Java implementando Springboot y mySQL", "Inicio: Marzo 2023", "Finalización: Octubre 2023"],
+                anchorText: "Ver certificado",
+                anchorLink: "https://app.aluracursos.com/program/certificate/ad3cafe0-71e9-46b6-b916-92aebe510d8c"
+            },
+            {
+                title: "ONE - Oracle Next Education",
+                text: ["Formación backend en Java implementando Springboot y mySQL", "Inicio: Marzo 2023", "Finalización: Octubre 2023"],
+                anchorText: "Ver certificado",
+                anchorLink: "https://app.aluracursos.com/program/certificate/ad3cafe0-71e9-46b6-b916-92aebe510d8c"
+            },
+            {
+                title: "ONE - Oracle Next Education",
+                text: ["Formación backend en Java implementando Springboot y mySQL", "Inicio: Marzo 2023", "Finalización: Octubre 2023"],
+                anchorText: "Ver certificado",
+                anchorLink: "https://app.aluracursos.com/program/certificate/ad3cafe0-71e9-46b6-b916-92aebe510d8c"
+            }
+        ])};
 
         ${btnArrowDown("proyectos", "Mira mis proyectos")}
 
-    </div>
+    </section>
 
     <!-- Wavy separator -->
     ${separatorWavy("rgb(67, 75, 82)", "#9b58da", "proyectos")}
 
-    <div id="projects" class="position-relative d-flex flex-row justify-content-center align-items-center">
+    <section id="projects" class="position-relative d-flex flex-row justify-content-center align-items-center">
 
         ${carrousel("carousel-projects",
             [
@@ -99,6 +131,19 @@ export const homeContent = `
 
         ${btnArrowDown("contacto", "¡Escribeme!")}
 
-    </div>
+    </section>
 
+    <!-- Wavy separator -->
+    ${separatorWavy("rgb(224, 187, 228)", "#9b58da", "contacto", "rgb(67, 75, 82)")}
+
+    <section id="contact" class="position-relative d-flex flex-row justify-content-center align-items-center" style="background-color: rgb(67, 75, 82);">
+
+        ${form()}
+
+        ${btnArrowUp("sobre-mi", "Conoceme")}
+
+    </section>
+
+    <!-- Wavy separator -->
+    ${separatorWavy("rgb(67, 75, 82)", "#9b58da", "redes")}
     `;
