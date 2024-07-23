@@ -72,17 +72,42 @@ export const updateContent = async() => {
                 //update home content
                 content.innerHTML = homeContent;
 
-                console.log("home");
-                
-                //fetch to home data
-                const homeFetchUtils = async () => {
-                }
-
-                //apply fetch to home data
-                homeFetchUtils();
-
                 //include footer
-                footer();
+                footer(
+                    true,
+                    {
+                        logo: "assets/images/imgs/logo.jpeg",
+                        logoAltText: "main logo",
+                        socialMediaLinks: [
+                            {
+                                iconClass: "bx bxl-linkedin",
+                                link: "https://www.linkedin.com/in/bortuno",
+                                ariaLabel: "LinkedIn"
+                            },
+                            {
+                                iconClass: "bx bxl-github",
+                                link: "https://github.com/Br1-O?tab=repositories",
+                                ariaLabel: "Github"
+                            },
+                            {
+                                iconClass: "bx bxl-whatsapp",
+                                link: "https://wa.me/5491112345678",
+                                ariaLabel: "Whatsapp"
+                            },
+                            {
+                                iconClass: "bx bx-envelope",
+                                link: "mailto:bruno.ortuno2@gmail.com",
+                                ariaLabel: "Email"
+                            }
+                        ],
+                        copyright: {
+                            pageName: "",
+                            date: "2024",
+                            authorName: "Bruno O. Ortuño",
+                            authorLink: "https://www.linkedin.com/in/bortuno"
+                        }
+                    }                    
+                );
 
             break;
 

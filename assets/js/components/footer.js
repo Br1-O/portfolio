@@ -1,140 +1,353 @@
-const footerContent = `      
-<!-- Wavy separator -->
-    <svg style="background-color: rgb(67, 75, 82);" width="100%" height="100%" id="svg" viewBox="0 180 1440 150" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
-    <!-- Modify last value of viewBox to modify its margin on the Y axis -->
-    <path d="M 0,390 L 0,150 C 84.74132600480931,175.79732050841636 169.48265200961862,201.5946410168327 232,188 C 294.5173479903814,174.4053589831673 334.81071796633466,121.41875644108555 401,95 C 467.18928203366534,68.58124355891445 559.2744761250428,68.73033321882514 641,93 C 722.7255238749572,117.26966678117486 794.0913775334938,165.6599106836139 861,164 C 927.9086224665062,162.3400893163861 990.3600137409824,110.63002404671936 1055,105 C 1119.6399862590176,99.36997595328064 1186.4685675025764,139.81999312950876 1251,155 C 1315.5314324974236,170.18000687049124 1377.7657162487117,160.09000343524562 1440,150 L 1440,390 Z" 
-    stroke="#9b58da" stroke-width="0px" stroke-opacity="0.5" fill="rgb(224, 187, 228)" fill-opacity="1" 
-    class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path>
-    </svg> 
+const footerContent = (
+    content = {
+        logo: "",
+        logoAltText: "",
+        basicContactInfo: 
+        [
+            {
+                anchorLink: "",
+                anchorText: ""
+            }
+        ],
+        socialMediaLinks: 
+        [
+            {
+                iconClass: "",
+                link: "",
+                ariaLabel: ""
+            }
+        ],
+        columns:
+        [
+            {
+                title: "",
+                links:
+                [
+                    {
+                        anchorLink: "",
+                        anchorText: ""
+                    }
+                ]
+            }
+        ],
+        newsLetter:
+        {
+            title: "",
+            link: "",
+            text: ""
+        },
+        copyright:
+        {
+            pageName: "",
+            date: "",
+            authorName: "",
+            authorLink: ""
+        }
+    }
 
-<!-- Footer -->
-    <footer id="contact">
-        <div class="footer-container">
+) => {
 
-            <img id="footer-logo" src="assets/images/imgs/logo.jpeg" alt="Oshare Designs logo">
+    //add footer tag
+    let footer = 
+    `      
+    <!-- Footer -->
+    <footer class="d-flex flex-column justify-content-center align-items-center" id="contact">
+    `;
 
-            <div class="footer-container-info" id="contact-info">
-                <a href="">
-                    Almte. Brown 3466 
-                </a>
-                <a href="">
-                    Mar del Plata, Provincia de Buenos Aires B7600
-                </a>
-                <a href="">
-                    +5492235012345
-                </a>
-                <a href="">
-                    bruno.ortuno2@gmail.com
-                </a>
+    //check if there are extra columns
+    const thereIsExtraColumns = content.columns;
+    //check if there is basic contact info
+    const thereIsBasicContactInfo = content.basicContactInfo;
 
-                <div class="footer-container-social-media">
-                    <a href="">
-                        <i class='bx bxl-facebook'></i>
-                    </a>
-                    <a href="">
-                        <i class='bx bxl-twitter'></i>
-                    </a>
-                    <a href="">
-                        <i class='bx bxl-instagram' ></i>
-                    </a>
-                    <a href="">
-                        <i class='bx bxl-youtube' ></i>
-                    </a>
-                    <a href="">
-                        <i class='bx bxl-linkedin' ></i>
-                    </a>
-                </div>
+    if (thereIsExtraColumns) {
 
-            </div>
+        //select footer parent container for columns based on the presence of extra columns
+        footer += 
+        `      
+            <div class="w-100 p-2 d-flex flex-column justify-content-center flex-md-row align-items-baseline gap-5">
+        `;
 
-            <div class="footer-container-info">
+        //add logo to footer
+        if(content.logo) {
 
-                <h4> Atención al cliente </h4>
+            footer += 
+            `
+                <img src="${content.logo}" alt="${content.logoAltText}">
+            `;
+        }
 
-                <a href="" class="footer-social-media">
-                    Contactanos
-                </a>
-                <a href="" class="footer-social-media">
-                    Sobre nosotros
-                </a>
-                <a href="" class="footer-social-media">
-                    Reclamos y Devoluciones
-                </a>
-                <a href="" class="footer-social-media">
-                    Privacidad
-                </a>
-                <a href="" class="footer-social-media">
-                    Guía de talles
-                </a>
-
-            </div>
-
+        //add basic contact data to footer
+        if (content.basicContactInfo) {
             
-            <div class="footer-container-info">
+            footer += 
+            `
+                <div class="d-flex flex-column p-1 gap-3 flex-wrap" id="contact-info">
+            `
 
-                <h4> Productos </h4>
+            for (const contactData of content.basicContactInfo) {
 
-                <a href="" class="footer-social-media">
-                    Indumentaria femenina
-                </a>
-                <a href="" class="footer-social-media">
-                    Indumentaria masculina
-                </a>
-                <a href="" class="footer-social-media">
-                    Indumentaria infantil
-                </a>
-                <a href="" class="footer-social-media">
-                    Indumentaria para Mascotas
-                </a>
-                <a href="" class="footer-social-media">
-                    Accesorios
-                </a>
+                footer += 
+                `
+                        <a href="${contactData.anchorLink}">
+                            ${contactData.anchorText}
+                        </a>
+                `;
+            }
+        }
 
-            </div>
+        //add social media icons with links and arial labels
+        if (content.socialMediaLinks) {
 
-            <div class="footer-container-info">
+            footer += 
+            `
+                    <div class="d-flex flex-row justify-content-start align-items-center gap-3 flex-wrap mt-1">
+            `;
+            
+            for (const socialMediaData of content.socialMediaLinks) {
+                
+                footer += 
+                `
+                            <a href="${socialMediaData.link}" aria-label="${socialMediaData.ariaLabel}">
+                                <i class="${socialMediaData.iconClass}"></i>
+                            </a>
+                `;
+            }
 
-                <h4> Nuestras ideas </h4>
+            footer +=
+            `
+                        </div>
 
-                <a href="" class="footer-social-media">
-                    Blog
-                </a>
-                <a href="" class="footer-social-media">
+                    </div>
+            `;
+        }
+
+        //add extra contact data and navigation columns
+        for (const column of content.columns) {
+
+            footer += 
+            `       <div class="d-flex flex-column p-1 gap-3 flex-wrap">
+                        <h4 class="h4 mb-1 fw-bold"> ${column.title} </h4>
+            `;
+
+            for (const link of column.links) {
+                
+                footer += 
+                `
+                        <a href="${link.anchorLink}" class="footer-social-media"> ${link.anchorText} </a>
+                `;
+            }
+
+            footer +=
+            `
+                    </div>
+            `;
+        }
+    } else if(thereIsBasicContactInfo) {
+
+        //select footer parent container for columns based on the presence of extra columns
+        footer += 
+        `      
+            <div class="w-100 p-2 d-flex flex-column justify-content-center flex-md-row align-items-baseline gap-5">
+        `;
+
+        //add logo to footer
+        if(content.logo) {
+
+            footer += 
+            `
+                <img src="${content.logo}" alt="${content.logoAltText}">
+            `;
+        }
+
+        //add basic contact data to footer
+        footer += 
+        `
+            <div class="d-flex flex-column justify-content-center align-items-start p-1 gap-3 flex-wrap" id="contact-info">
+        `
+
+        for (const contactData of content.basicContactInfo) {
+
+            footer += 
+            `
+                    <a href="${contactData.anchorLink}" class="fs-5">
+                        ${contactData.anchorText}
+                    </a>
+            `;
+        }
+
+        //add social media icons with links and arial labels
+        if (content.socialMediaLinks) {
+
+            footer += 
+            `
+                    <div class="d-flex flex-row justify-content-start align-items-center gap-3 flex-wrap mt-1">
+            `;
+            
+            for (const socialMediaData of content.socialMediaLinks) {
+                
+                footer += 
+                `
+                            <a href="${socialMediaData.link}" aria-label="${socialMediaData.ariaLabel}">
+                                <i class="${socialMediaData.iconClass} fs-1"></i>
+                            </a>
+                `;
+            }
+
+            footer +=
+            `
+                        </div>
+
+                    </div>
+            `;
+        }
+    }else{
+
+        //select footer parent container for columns based on the presence of extra columns
+        footer += 
+        `      
+            <div class="w-100 p-3 d-flex flex-column justify-content-center align-items-center gap-3">
+        `;
+
+        //add logo to footer
+        if(content.logo) {
+
+            footer += 
+            `
+                <img src="${content.logo}" alt="${content.logoAltText}">
+            `;
+        }
+
+        //add social media icons
+
+        footer +=
+        `
+            <h4 class="h4 fw-bold"> Encontrame también en: </h4>
+        `
+
+        footer += 
+        `
+                <div class="d-flex flex-row justify-content-start align-items-center gap-3 flex-wrap">
+        `;
+        
+        for (const socialMediaData of content.socialMediaLinks) {
+            
+            footer += 
+            `
+                        <a href="${socialMediaData.link}" aria-label="${socialMediaData.ariaLabel}">
+                            <i class="${socialMediaData.iconClass}" style="font-size:max(3vmax, 3rem);"></i>
+                        </a>
+            `;
+        }
+
+        footer +=
+        `
+                    </div>
+
+                </div>
+        `;
+    }
+
+    //add newsletter column
+
+    if (content.newsLetter) {
+
+        footer +=
+        `
+            <div class="d-flex flex-column p-1 gap-3 flex-wrap" id="newsletter">
+                <p class="fs-3 fw-bold bt-1"> ${(content.newsLetter).title} </p>
+                <a href="${(content.newsLetter).link}">
                     Newsletter
                 </a>
-                <a href="" class="footer-social-media">
-                    Afiliados
-                </a>
-                <a href="" class="footer-social-media">
-                    Campañas
-                </a>
-
+                <p> ${(content.newsLetter).text} </p>
             </div>
+        `;
+    }
 
-            <div class="footer-container-info" id="newsletter">
+    //closing of internal columns container tag
+    footer +=
+    `
+        </div>
+    `;
 
-            <p> ¡Adherite a nuestro boletín semanal! </p>
-            <a href="" class="footer-social-media">
-                Newsletter
-            </a>
-            <p>¡Recibí nuestras ofertas, descuentos y novedades!</p>
+    //add copyright container
+    if (content.copyright) {
 
+        footer +=
+        `
+            <div class="footer-copyright w-100">
+                <p> ${(content.copyright).pageName} © ${(content.copyright).date} · All rights reserved · Designed by <a href="${(content.copyright).authorLink}"> ${(content.copyright).authorName} </a></p>
             </div>
-        </div>
+        `;
+    }
 
-        <div class="footer-copyright">
-            <p> Oshare Designs © 2024 · All rights reserved · Designed by <a href="https://www.linkedin.com/in/bortuno"> Bruno O. Ortuño </a></p>
-        </div>
+    //closing tag of footer
 
+    footer +=
+    `
     </footer>
-`
+    `;
 
-export const footer = (show = true) => {
+    return footer;
+}
+
+export const footer = (
+    show = true,
+    content = {
+        logo: "",
+        logoAltText: "",
+        basicContactInfo: 
+        [
+            {
+                anchorLink: "",
+                anchorText: ""
+            }
+        ],
+        socialMediaLinks: 
+        [
+            {
+                iconClass: "",
+                link: "",
+                ariaLabel: ""
+            }
+        ],
+        columns:
+        [
+            {
+                title: "",
+                links:
+                [
+                    {
+                        anchorLink: "",
+                        anchorText: ""
+                    }
+                ]
+            }
+        ],
+        newsLetter:
+        {
+            title: "",
+            link: "",
+            text: ""
+        },
+        copyright:
+        {
+            pageName: "",
+            date: "",
+            authorName: "",
+            authorLink: ""
+        }
+    }
+) => {
 
     let footerSection = document.getElementById("footer-section");
 
+    let contentData = content;
+
+    //display footer is show option is true
     if (show) {
-        footerSection.innerHTML = footerContent;
+        footerSection.innerHTML = 
+        
+        footerContent(contentData);
     }else{
         footerSection.innerHTML = "";
     }
