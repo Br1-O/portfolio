@@ -18,7 +18,7 @@ export const accordion = (id = "", itemList = [{title: "", text: [""], anchorTex
         `
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item-${i}" aria-expanded="false" aria-controls="item-${i}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item-${i}" aria-expanded="false" aria-controls="item-${i}" aria-label="acordion">
                         ${item.title}
                     </button>
                 </h2>

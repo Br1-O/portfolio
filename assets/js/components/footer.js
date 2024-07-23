@@ -13,7 +13,7 @@ const footerContent = `
 
             <img id="footer-logo" src="assets/images/imgs/logo.jpeg" alt="Oshare Designs logo">
 
-            <div class="footer-container-info" id="contact-info">
+            <div aria-label="Direccion del perfil" class="footer-container-info" id="contact-info">
                 <a href="">
                     Almte. Brown 3466 
                 </a>
@@ -28,26 +28,26 @@ const footerContent = `
                 </a>
 
                 <div class="footer-container-social-media">
-                    <a href="">
+                    <a aria-label="Logo de Facebook" href="">
                         <i class='bx bxl-facebook'></i>
                     </a>
-                    <a href="">
+                    <a aria-label="Logo de twitter " href="">
                         <i class='bx bxl-twitter'></i>
                     </a>
-                    <a href="">
+                    <a aria-label="Logo de instagram" href="">
                         <i class='bx bxl-instagram' ></i>
                     </a>
-                    <a href="">
+                    <a aria-label="Logo de Youtube" href="">
                         <i class='bx bxl-youtube' ></i>
                     </a>
-                    <a href="">
+                    <a aria-label="Logo de LinkedIn" href="">
                         <i class='bx bxl-linkedin' ></i>
                     </a>
                 </div>
 
             </div>
 
-            <div class="footer-container-info">
+            <div aria-label="link para atencion del cliente" class="footer-container-info">
 
                 <h4> Atención al cliente </h4>
 
@@ -70,7 +70,7 @@ const footerContent = `
             </div>
 
             
-            <div class="footer-container-info">
+            <div aria-label="link de la lista de los productos" class="footer-container-info">
 
                 <h4> Productos </h4>
 
@@ -92,7 +92,7 @@ const footerContent = `
 
             </div>
 
-            <div class="footer-container-info">
+            <div aria-label="links de Nuestras ideas" class="footer-container-info">
 
                 <h4> Nuestras ideas </h4>
 
@@ -114,7 +114,7 @@ const footerContent = `
             <div class="footer-container-info" id="newsletter">
 
             <p> ¡Adherite a nuestro boletín semanal! </p>
-            <a href="" class="footer-social-media">
+            <a aria-label="newsletter" href="" class="footer-social-media">
                 Newsletter
             </a>
             <p>¡Recibí nuestras ofertas, descuentos y novedades!</p>
