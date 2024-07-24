@@ -933,6 +933,14 @@ section{
 
 /* ■■■■­■■­■■­■■­■■ carousel projects ■■­■■­■■­■■­■■­■■­ ­*/
 
+#carousel-projects h2, span{
+  color: var(--font-hover-color) !important;
+}
+
+#carousel-projects p{
+  color: var(--logo-bg-color) !important;
+}
+
 #carousel-projects .card{
   height: max(35.5vmax, 35.5rem);
 }

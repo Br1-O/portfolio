@@ -61,7 +61,7 @@ export const carrousel = (id = "carousel", slideArray = [{img:"", alt:"", h:"", 
                         <div class="card-body">
                             <p class="card-text h5"> ${slide.p} </p>
                             <div class="mt-3">
-                                Usando: <small class="text-body-secondary"> ${tagsString} </small>
+                                <span> Usando: </span> <small class="text-body-secondary"> ${tagsString} </small>
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@ export const carrousel = (id = "carousel", slideArray = [{img:"", alt:"", h:"", 
                         <div class="card-body">
                             <p class="card-text h5"> ${slide.p} </p>
                             <div class="mt-3">
-                                Usando: <small class="text-body-secondary"> ${tagsString} </small>
+                                <span> Usando: </span> <small class="text-body-secondary"> ${tagsString} </small>
                             </div>
                         </div>
                     </div>
