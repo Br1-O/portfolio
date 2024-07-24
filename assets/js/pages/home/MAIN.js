@@ -23,7 +23,14 @@ export const homeContent = `
             title: "", 
             text: "¡Hola! Soy Bruno Ortuño. Soy un desarrollador fullstack apasionado por el diseño y la implementación de soluciones de software escalables y eficientes. <br> <br> Tengo un amplio conocimiento en lenguajes de programación como Java, Python, JavaScript, PHP y SQL. Me apasiona la tecnología y siempre estoy buscando nuevos desafíos para poner a prueba mis habilidades. <br> <br> Actualmente me encuentro realizando múltiples cursos para certificar todos los conocimientos que menciono en mi perfil, con el fin de mantenerme actualizado y mejorar constantemente.",
             textColor: "var(--font-hover-color)",
-            backgroundColor: "var(--logo-bg-color)"
+            backgroundColor: "var(--logo-bg-color)",
+            links: 
+            [
+                {
+                    anchorText: "Ver curriculum",
+                    anchorLink: "assets/documents/bruno_ortuno_fullstack_developer_CV.pdf"
+                }
+            ]
             }
         )}
 
