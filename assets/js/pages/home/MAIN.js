@@ -147,7 +147,7 @@ export const homeContent = `
 
         ${subtitle("Mandame un mensaje", "var(--main-bg-color)", 2, "var(--font-hover-color)")}
 
-        ${form()}
+        ${form("form-contact")}
 
         ${btnArrowUp("sobre-mi", "Conoceme")}
 

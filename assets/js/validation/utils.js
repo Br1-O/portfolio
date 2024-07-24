@@ -56,7 +56,7 @@ export const isAlpha = (field, errorMessageField) => {
 
         //display error message
         errorMessageField.classList.remove("d-none");
-        errorMessageField.innerText = "El campo sólo puede poseer caracteres alfabeticos.";
+        errorMessageField.innerText = "*el campo sólo puede poseer caracteres alfabeticos.";
     
         field.focus();
 
@@ -82,6 +82,33 @@ export const isNum = (field, errorMessageField) => {
     
     return true;
 }
+
+//name validation
+export const nameValidation = (inputField, errorMessageField, minLength = 5, maxLength = 30) => {
+
+    // Reset error message field
+    errorMessageField.classList.add("d-none");
+    errorMessageField.innerText = "";
+
+    // Check if input is only alphabetic
+    if (!isAlpha(inputField, errorMessageField)) {
+        return false;
+    }
+
+    // Check minimum length
+    if (!minLengthValidation(inputField, errorMessageField, minLength, "*el nombre es muy corto")) {
+        return false;
+    }
+
+    // Check maximum length
+    if (!maxLengthValidation(inputField, errorMessageField, maxLength, "*el nombre es muy largo")) {
+        return false;
+    }
+
+    // If all validations pass
+    return true;
+}
+
 
 //email validation
 export const emailValidation = (emailField, errorMessageField) => {

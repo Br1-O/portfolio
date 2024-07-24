@@ -6,7 +6,7 @@ import { navBar } from "../components/navBar.js";
 //footer content
 import { footer } from "../components/footer.js";
 //validations
-import { maxLengthValidation, minLengthValidation, phoneNumberValidation, emailValidation, isAlpha, isNum, areValuesEqual, passwordValidation } from "../validation/utils.js";
+import { maxLengthValidation, minLengthValidation, phoneNumberValidation, emailValidation, isAlpha, isNum, areValuesEqual, passwordValidation, nameValidation } from "../validation/utils.js";
 //page not found content
 import { notFoundMessage } from "../pages/notFound404.js";
 //user model to control state
@@ -17,6 +17,7 @@ import { editableField, editableFieldsEventListeners } from "../components/forms
 import { formInput, setOnChangeValidationForInput, validationStatus } from "../components/forms/formInput.js";
 //home page content
 import { homeContent } from "../pages/home/MAIN.js";
+import { validationFormContact } from "../validation/formContact.js";
 
 //I'm not implementing this until finishing the project, since local server is unable to redirect all petitions to my index.html without using backend server utilities
 
@@ -71,6 +72,9 @@ export const updateContent = async() => {
 
                 //update home content
                 content.innerHTML = homeContent;
+
+                //apply validation event on contact form
+                validationFormContact(maxLengthValidation, minLengthValidation, nameValidation, emailValidation);
 
                 //include footer
                 footer(
