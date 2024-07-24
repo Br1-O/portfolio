@@ -1,43 +1,38 @@
 export const form = () => {
 
     let form =
-    `   <form class="d-flex flex-column ">
-            <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
+    `   
+    <form class="container d-flex flex-column justify-content-center align-items-center p-3 rounded col-12 col-md-8 col-xl-4 fs-3 fw-2 bg-glass-effect" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="2000">
+        <div class="container-fluid row d-flex flex-row justify-content-center">
+            <div class="col-12">
+                <div class="input-group mb-3 d-flex flex-column justify-content-center align-items-start gap-3 w-100">
+                    <p id="errorPhoneContactForm" class="error d-none"></p>
+                    <label for="fullName" class="form-label" id="label-name">Nombre</label>
+                    <input type="text" class="form-control rounded w-100 mx-auto" name="fullName" placeholder="Ingrese su nombre y apellido" aria-label="Nombre completo" aria-describedby="label-name">
+                </div>
 
-            <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <span class="input-group-text" id="basic-addon2">@example.com</span>
-            </div>
+                <div class="input-group mb-3 d-flex flex-column justify-content-center align-items-start gap-3 w-100">
+                    <p id="errorEmailContactForm" class="error d-none"></p>
+                    <label for="email" class="form-label" id="label-email">Correo electronico</label>
+                    <input type="text" class="form-control rounded w-100 mx-auto" name="email" placeholder="Correo Electronico" aria-label="Correo Electronico" aria-describedby="label-email">
+                </div>
 
-            <div class="mb-3">
-            <label for="basic-url" class="form-label">Your vanity URL</label>
-            <div class="input-group">
-                <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-            </div>
-            <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
-            </div>
+                <div class="input-group mb-3 d-flex flex-column justify-content-center align-items-start gap-3 w-100">
+                    <p id="errorSubjectContactForm" class="error d-none"></p>
+                    <label for="subject" class="form-label" id="label-subject">Asunto</label>
+                    <input type="text" class="form-control rounded w-100 mx-auto" placeholder="Ingrese el motivo de su mensaje" aria-label="Asunto" aria-describedby="label-subject">
+                </div>
 
-            <div class="input-group mb-3">
-            <span class="input-group-text">$</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-            <span class="input-group-text">.00</span>
-            </div>
+                <div class="input-group mb-3 d-flex flex-column justify-content-center align-items-start gap-3 w-100">
+                    <p id="errorSubjectContactForm" class="error d-none"></p>
+                    <label for="message" class="form-label" id="label-message">Mensaje</label>
+                    <textarea type="text" class="form-control rounded w-100 mx-auto" name="message" placeholder="Escriba su mensaje" aria-label="Asunto" aria-describedby="label-message"></textarea>
+                </div>
 
-            <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-            <span class="input-group-text">@</span>
-            <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                <input type="submit" class="form-btn mx-auto" value="Enviar mensaje">
             </div>
-
-            <div class="input-group">
-            <span class="input-group-text">With textarea</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-            </div>
-        </form>
+        </div>
+    </form>
     `;
 
     return form;

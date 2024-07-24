@@ -3,7 +3,7 @@ export const carrousel = (id = "carousel", slideArray = [{img:"", alt:"", h:"", 
     let container = 
     `
     <div id="${id}" class="carousel slide col-sm-12 col-md-8 col-xl-6 d-flex justify-content-center align-center" 
-    data-bs-ride="carousel" data-bs-interval="5000">
+    data-bs-ride="carousel" data-bs-interval="5000" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="2000">
 
         <div class="carousel-indicators">
     `;

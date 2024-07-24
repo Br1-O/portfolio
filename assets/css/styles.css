@@ -19,6 +19,7 @@ table { border-collapse: collapse; border-spacing: 0;}
 html {
   scroll-behavior: smooth;
   background-color: var(--logo-bg-color);
+  font-family: var(--font-main, "sans-serif");
 }
 
 textarea {
@@ -916,6 +917,20 @@ section{
   height: 80vh !important;
 }
 
+#projects{
+  height: 90vh !important;
+}
+
+.subtitle{
+  font-family: var(--font-main, "sans-serif");
+  font-size: max(4vmax,3rem);
+}
+
+.subtitle span{
+  font-family: var(--font-main, "sans-serif");
+  color:var(--font-hover-color);
+}
+
 /* ■■■■­■■­■■­■■­■■ profile card ■■­■■­■■­■■­■■­■■­ ­*/
 
 
@@ -932,7 +947,13 @@ section{
 
 /* ■■■■­■■­■■­■■­■■ form ■■­■■­■■­■■­■■­■■­ ­*/
 
+form{
+  color: var(--main-bg-color);
+}
+
 .form-btn{
+  max-width: max(15vmax, 15rem);
+
   font-family: var(--font-main, "sans-serif");
   font-weight: 300;
   font-size: 1.1rem;
@@ -957,8 +978,9 @@ section{
 .form-btn:hover{
   color: var(--font-hover-color);
   background-color: var(--border-color);
+  filter: brightness(1.15);
+  transform: scale(1.025);
 }
-
 
 /* ■■■■­■■­■■­■■­■■ Downwards arrow to next section ■■■■­■■­■■­■■­■■ */
 
@@ -1077,7 +1099,6 @@ footer i:hover{
   font-weight: 500;
 }
 
-
 .footer-copyright a:hover{
   color: white;
 }
@@ -1090,12 +1111,29 @@ footer i:hover{
 
     /* ­■■­■■­■■ SECTIONS HEIGHT ­■■­■■­■■ */
     section {
-        height: 100vh !important;
+      height: 100vh !important;
     }
+
+    section:first-of-type{
+      margin-top: 8rem;
+      height: auto !important;
+    }
+
+    #projects{
+      height: auto !important;
+    }
+
   }
 
 /* Medium screens */
   @media (max-width: 992px) {
+
+      /* ­■■­■■­■■ SECTIONS HEIGHT ­■■­■■­■■ */
+  
+      section:first-of-type{
+        margin-top: 5rem;
+        height: auto !important;
+      }
 
     /* ­■■­■■­■■ MENU HAMBURGER ­■■­■■­■■ */
     .navbar-nav {

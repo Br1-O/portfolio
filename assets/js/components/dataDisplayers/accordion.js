@@ -5,7 +5,7 @@ export const accordion = (id = "", itemList = [{title: "", text: [""], anchorTex
     //add parent container of component
     let accordion =
     `
-        <div class="accordion accordion-flush col-sm-12 col-md-10 col-xl-6" id="${id}">
+        <div class="accordion accordion-flush col-sm-12 col-md-10 col-xl-6" id="${id} data-aos="zoom-in" data-aos-offset="100" data-aos-duration="2000">
     `;
 
     //counter for ids

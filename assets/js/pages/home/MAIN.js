@@ -4,6 +4,7 @@ import { separatorWavy } from "../../components/separators/separatorWavy.js";
 import { cardHorizontal } from "../../components/cards/cardHorizontal.js";
 import { accordion } from "../../components/dataDisplayers/accordion.js";
 import { form } from "../../components/forms/form.js";
+import { subtitle } from "../../components/text/titles.js";
 
 
 export const homeContent = `
@@ -11,13 +12,15 @@ export const homeContent = `
     <!-- Wavy separator -->
     ${separatorWavy("rgb(67, 75, 82)", "#9b58da", "sobre-mi")}
 
-    <section id="about-me" class="position-relative d-flex flex-row justify-content-center align-items-center">
+    <section id="about-me" class="position-relative d-flex flex-column justify-content-center align-items-center">
+
+        ${subtitle("Sobre mi", "var(--logo-bg-color)", 1, "var(--font-hover-color)")}
 
         ${cardHorizontal(
             {
             img: "assets/images/imgs/profile.jpg", 
             alt: "imagen de perfil de Bruno O. Ortuño", 
-            title: "Sobre mí", 
+            title: "", 
             text: "¡Hola! Soy Bruno Ortuño. Soy un desarrollador fullstack apasionado por el diseño y la implementación de soluciones de software escalables y eficientes. Tengo un amplio conocimiento en lenguajes de programación como Java, Python, JavaScript, PHP y SQL. Me apasiona la tecnología y siempre estoy buscando nuevos desafíos para poner a prueba mis habilidades. Actualmente me encuentro realizando múltiples cursos para certificar todos los conocimientos que menciono en mi perfil, con el fin de mantenerme actualizado y mejorar constantemente."
             }
         )}
@@ -29,7 +32,9 @@ export const homeContent = `
     <!-- Wavy separator -->
     ${separatorWavy("rgb(224, 187, 228)", "#9b58da", "formacion", "rgb(67, 75, 82)")}
 
-    <section id="formation" class="position-relative d-flex flex-row justify-content-center align-items-center" style="background-color: rgb(67, 75, 82);">
+    <section id="formation" class="position-relative d-flex flex-column justify-content-center align-items-center gap-2" style="background-color: rgb(67, 75, 82);">
+
+        ${subtitle("Cursos y formaciones", "var(--main-bg-color)", 2, "var(--font-hover-color)")}
 
         ${accordion("formation-accordion",
         [
@@ -80,7 +85,9 @@ export const homeContent = `
     <!-- Wavy separator -->
     ${separatorWavy("rgb(67, 75, 82)", "#9b58da", "proyectos")}
 
-    <section id="projects" class="position-relative d-flex flex-row justify-content-center align-items-center">
+    <section id="projects" class="position-relative d-flex flex-column justify-content-center align-items-center">
+
+        ${subtitle("Mis últimos proyectos", "var(--logo-bg-color)", 2, "var(--font-hover-color)")}
 
         ${carrousel("carousel-projects",
             [
@@ -136,7 +143,9 @@ export const homeContent = `
     <!-- Wavy separator -->
     ${separatorWavy("rgb(224, 187, 228)", "#9b58da", "contacto", "rgb(67, 75, 82)")}
 
-    <section id="contact" class="position-relative d-flex flex-row justify-content-center align-items-center" style="background-color: rgb(67, 75, 82);">
+    <section id="contact" class="position-relative d-flex flex-column justify-content-center align-items-center" style="background-color: rgb(67, 75, 82);">
+
+        ${subtitle("Mandame un mensaje", "var(--main-bg-color)", 2, "var(--font-hover-color)")}
 
         ${form()}
 

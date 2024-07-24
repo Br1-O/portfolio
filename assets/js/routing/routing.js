@@ -153,8 +153,6 @@ export const updateContent = async() => {
 
                 //include proper navbar
                 navBar(userData.isSessionSet);
-                //include footer
-                footer();
                 
             break;
         }
