@@ -1,8 +1,8 @@
-export const cardHorizontal = (cardData = {img: "", alt: "", title: "", text: ""}) => {
+export const cardHorizontal = (cardData = {img: "", alt: "", title: "", text: "", textColor: "", backgroundColor: ""}) => {
 
     let card =
     `
-        <div class="card mb-3 col-sm-12 col-md-10 col-xl-8" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="2000">
+        <div class="card mb-3 col-sm-12 col-md-10 col-xl-8" style = "background-color: ${cardData.backgroundColor}; color: ${cardData.textColor};" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="2000">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="${cardData.img}" class="img-fluid rounded-start" alt="${cardData.alt}">
