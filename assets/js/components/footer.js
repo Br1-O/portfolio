@@ -116,7 +116,6 @@ const footerContent = (
             footer +=
             `
                         </div>
-
                     </div>
             `;
         }
@@ -275,7 +274,7 @@ const footerContent = (
         footer +=
         `
             <div class="footer-copyright w-100">
-                <p> ${(content.copyright).pageName} © ${(content.copyright).date} · All rights reserved · Designed by <a href="${(content.copyright).authorLink}"> ${(content.copyright).authorName} </a></p>
+                <p style= "color: var(--font-hover-color)"> ${(content.copyright).pageName} © ${(content.copyright).date} · All rights reserved · Designed by <a href="${(content.copyright).authorLink}"> ${(content.copyright).authorName} </a></p>
             </div>
         `;
     }

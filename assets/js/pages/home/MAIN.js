@@ -10,7 +10,7 @@ import { subtitle } from "../../components/text/titles.js";
 export const homeContent = `
 
     <!-- Wavy separator -->
-    ${separatorWavy("rgb(67, 75, 82)", "#9b58da", "sobre-mi")}
+    ${separatorWavy("var(--logo-bg-color)", "#9b58da", "sobre-mi")}
 
     <section id="about-me" class="position-relative d-flex flex-column justify-content-center align-items-center">
 
@@ -30,9 +30,9 @@ export const homeContent = `
     </section>
 
     <!-- Wavy separator -->
-    ${separatorWavy("rgb(224, 187, 228)", "#9b58da", "formacion", "rgb(67, 75, 82)")}
+    ${separatorWavy("var(--main-bg-color)", "#9b58da", "formacion", "var(--logo-bg-color)")}
 
-    <section id="formation" class="position-relative d-flex flex-column justify-content-center align-items-center gap-2" style="background-color: rgb(67, 75, 82);">
+    <section id="formation" class="position-relative d-flex flex-column justify-content-center align-items-center gap-2" style="background-color: var(--logo-bg-color);">
 
         ${subtitle("Cursos y formaciones", "var(--main-bg-color)", 2, "var(--font-hover-color)")}
 
@@ -83,7 +83,7 @@ export const homeContent = `
     </section>
 
     <!-- Wavy separator -->
-    ${separatorWavy("rgb(67, 75, 82)", "#9b58da", "proyectos")}
+    ${separatorWavy("var(--logo-bg-color)", "#9b58da", "proyectos")}
 
     <section id="projects" class="position-relative d-flex flex-column justify-content-center align-items-center">
 
@@ -141,9 +141,9 @@ export const homeContent = `
     </section>
 
     <!-- Wavy separator -->
-    ${separatorWavy("rgb(224, 187, 228)", "#9b58da", "contacto", "rgb(67, 75, 82)")}
+    ${separatorWavy("var(--main-bg-color)", "#9b58da", "contacto", "var(--logo-bg-color)")}
 
-    <section id="contact" class="position-relative d-flex flex-column justify-content-center align-items-center" style="background-color: rgb(67, 75, 82);">
+    <section id="contact" class="position-relative d-flex flex-column justify-content-center align-items-center" style="background-color: var(--logo-bg-color);">
 
         ${subtitle("Mandame un mensaje", "var(--main-bg-color)", 2, "var(--font-hover-color)")}
 
@@ -154,5 +154,5 @@ export const homeContent = `
     </section>
 
     <!-- Wavy separator -->
-    ${separatorWavy("rgb(67, 75, 82)", "#9b58da", "redes")}
+    ${separatorWavy("var(--logo-bg-color)", "#9b58da", "redes")}
     `;

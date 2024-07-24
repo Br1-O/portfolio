@@ -29,8 +29,10 @@ textarea {
 /* ■■■■­■■­■■­■■­■■ root variables  ■■■■­■■­■■­■■­■■ */
 
 :root{
-    --main-bg-color: rgb(224, 187, 228);
-    --border-color: rgba(155, 88, 218, 0.906);
+    /* --main-bg-color: rgb(224, 187, 228);*/
+    --main-bg-color: rgb(112, 159, 246);
+    /* --border-color: rgba(155, 88, 218, 0.906);*/
+    --border-color: rgba(6, 91, 248, 0.906);
     --border-hover-color: rgb(237, 236, 238);
     --font-color: rgb(81, 80, 80);
     --font-hover-color: rgb(237, 236, 238);
@@ -38,11 +40,6 @@ textarea {
     --logo-bg-color: rgb(67, 75, 82);
     
     --font-main: 'Jost';
-
-    /* variables for product's tags colors*/
-    --tag-color-new:rgba(61, 250, 74, 0.7);
-    --tag-color-discount:rgba(251, 37, 37, 0.7);
-    --tag-color-special:rgb(248, 255, 36, 0.7);
 }
 
 /* ■■■■­■■­■■­■■­■■ animations  ■■■■­■■­■■­■■­■■ */
@@ -966,7 +963,7 @@ form{
   margin-left: 2rem;
 
   /* glass like effect */
-  background-color:  rgba(155, 88, 218);
+  background-color:  var(--main-bg-color);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 
