@@ -22,31 +22,37 @@ const defaultNavBar =
                     <a aria-label="Formacion" class="nav-link" href="#formacion"> Formación </a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mis proyectos">
-                        Proyectos
-                    </a>
-                    <ul class="dropdown-menu bg-glass-effect">
-                        <li>
-                            <a class="dropdown-item" href="#"> Oshare Designs </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"> Nextflix </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"> PokeDex </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"> Pagina Portfolio </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"> Batch </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"> CRM </a>
-                        </li>
-                    </ul>
+                <li class="nav-item">
+                    <a aria-label="Formacion" class="nav-link" href="#proyectos" aria-label="Proyectos"> Proyectos </a>
                 </li>
+
+                <!--
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Mis proyectos">
+                            Proyectos
+                        </a>
+                        <ul class="dropdown-menu bg-glass-effect">
+                            <li>
+                                <a class="dropdown-item" href="#"> Oshare Designs </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"> Nextflix </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"> PokeDex </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"> Pagina Portfolio </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"> Batch </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"> CRM </a>
+                            </li>
+                        </ul>
+                    </li>
+                -->
 
                 <li class="nav-item">
                     <a class="nav-link" href="#contacto" aria-label="Contacto"> Contacto </a>

@@ -12,9 +12,6 @@ import { notFoundMessage } from "../pages/notFound404.js";
 //user model to control state
 import { userData } from "../models/user.js";
 import { dinamicRouteDisplay } from "./dinamicRouting.js";
-//input components
-import { editableField, editableFieldsEventListeners } from "../components/forms/editableField.js";
-import { formInput, setOnChangeValidationForInput, validationStatus } from "../components/forms/formInput.js";
 //home page content
 import { homeContent } from "../pages/home/MAIN.js";
 import { validationFormContact } from "../validation/formContact.js";
@@ -189,8 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
     body.style.overflowY = "hidden";
 
     window.onload = () => {
-
-        console.log("loaded");
         
         //display content when the window if fully loaded
         loadingScreen.classList.remove("flex");
