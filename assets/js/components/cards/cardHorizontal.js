@@ -20,7 +20,7 @@ export const cardHorizontal = (cardData = {img: "", alt: "", title: "", text: ""
         
             card +=
             `
-                            <a href="${link.anchorLink}" class="card-text fs-5 align-self-start mt-4" target="_blank" rel="noopener noreferrer">${link.anchorText}</a>
+                            <a href="${link.anchorLink}" class="card-text fs-5 mt-4 form-btn" target="_blank" rel="noopener noreferrer">${link.anchorText}</a>
             `;
         }
     }
