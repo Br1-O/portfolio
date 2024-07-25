@@ -1,5 +1,3 @@
-import { modalLink, modalWindow } from "./modal.js";
-
 export const accordion = (id = "", itemList = [{title: "", text: [""], anchorText: "", anchorLink: "", img: "", alt: ""}]) => {
 
     //add parent container of component
@@ -39,12 +37,13 @@ export const accordion = (id = "", itemList = [{title: "", text: [""], anchorTex
 
         //add link to content
         if (item.anchorLink) {
+            
             accordion += 
             `  
                 <a href="${item.anchorLink}" target="_blank" rel="noopener noreferrer">
                     ${item.anchorText}
                 </a>
-            `
+            `;
         }
 
         //if image is included
@@ -53,21 +52,7 @@ export const accordion = (id = "", itemList = [{title: "", text: [""], anchorTex
             //add modal window
             accordion +=
             `
-                ${modalWindow("modal-certificado-" + i,
-                    [
-                        {
-                            title: item.title,
-                            img: item.img,
-                            alt: item.alt
-                        }
-                    ]
-                )}
-            `;
-
-            //add modal link to display image
-            accordion +=
-            `
-                ${modalLink("Ver imagen", "modal-certificado-" + i)}
+                <img class="w-50 rounded m-auto" src="${item.img}" alt="${item.alt}">
             `;
         }
 
